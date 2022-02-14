@@ -2,52 +2,24 @@
 
 
 
+
 // TODO: assign an array to the hours variable below
-
 // your array should contain the hours of 6am through 7pm
-
-
-var hours;
-
+var hours; [ '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm' ]
 // REVIEW: look at the JS object for a store below (seattle)
-
-
 // You will be copying this object design, and it's capabilities
 
-
 var seattle = {
-
-
- locationName: 'Seattle',
-
-
+ locationName: 'Bend',
  minCustomersPerHour: 23,
-
-
  maxCustomersPerHour: 65,
-
-
  avgCookiesPerSale: 6.3,
-
-
  customersEachHour: [],
-
-
  cookiesEachHour: [],
-
-
  totalDailyCookies: 0,
-
-
  calcCustomersEachHour: function () {
-
-
    for (var i = 0; i < hours.length; i++) {
-
-
      this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour));
-
-
    }
 
 
@@ -147,7 +119,7 @@ var seattle = {
 
 
 
-var tokyo = { };
+var Athens = { };
 
 
 
@@ -155,7 +127,7 @@ var tokyo = { };
 
 
 
-var dubai = { };
+var Bend = { };
 
 
 
@@ -163,7 +135,7 @@ var dubai = { };
 
 
 
-var paris = { };
+var Portland = { };
 
 
 
@@ -171,7 +143,7 @@ var paris = { };
 
 
 
-var lima = { };
+var NewYork= { };
 
 
 
@@ -220,4 +192,5 @@ var allShops = [];
 
 
 })();
+
 
