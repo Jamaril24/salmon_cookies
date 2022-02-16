@@ -147,7 +147,7 @@ var seattle = {
 
 
 
-var tokyo = { };
+var  = { };
 
 
 
@@ -155,7 +155,29 @@ var tokyo = { };
 
 
 
-var dubai = { };
+
+var Bend = {
+
+
+  locationName: 'Bend',
+ 
+ 
+  minCustomersPerHour: 23,
+ 
+ 
+  maxCustomersPerHour: 65,
+ 
+ 
+  avgCookiesPerSale: 6.3,
+ 
+ 
+  customersEachHour: [],
+ 
+ 
+  cookiesEachHour: [],
+ 
+ 
+  totalDailyCookies: 0,
 
 
 
@@ -163,7 +185,29 @@ var dubai = { };
 
 
 
-var paris = { };
+
+var Portland = {
+
+
+  locationName: 'Portland',
+ 
+ 
+  minCustomersPerHour: 23,
+ 
+ 
+  maxCustomersPerHour: 65,
+ 
+ 
+  avgCookiesPerSale: 6.3,
+ 
+ 
+  customersEachHour: [],
+ 
+ 
+  cookiesEachHour: [],
+ 
+ 
+  totalDailyCookies: 0,
 
 
 
@@ -171,8 +215,28 @@ var paris = { };
 
 
 
-var lima = { };
+var NewYork = {
 
+
+  locationName: 'NewYork',
+ 
+ 
+  minCustomersPerHour: 23,
+ 
+ 
+  maxCustomersPerHour: 65,
+ 
+ 
+  avgCookiesPerSale: 6.3,
+ 
+ 
+  customersEachHour: [],
+ 
+ 
+  cookiesEachHour: [],
+ 
+ 
+  totalDailyCookies: 0,
 
 
 
@@ -189,11 +253,6 @@ function random(min, max) {
 
 
 }
-
-
-
-
-
 
 
 // TODO: list all shop objects in an array
