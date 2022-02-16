@@ -195,6 +195,9 @@ var Portland = {
  },
 
 
+var  = { };
+
+
  render() {
    this.calcCookiesEachHour();
 
@@ -210,13 +213,36 @@ var Portland = {
    }
 
 
+
    listItem = document.createElement('li');
    listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
    unorderedList.appendChild(listItem);
  }
 
 
+var Bend = {
+
 };
+
+  locationName: 'Bend',
+ 
+ 
+  minCustomersPerHour: 23,
+ 
+ 
+  maxCustomersPerHour: 65,
+ 
+ 
+  avgCookiesPerSale: 6.3,
+ 
+ 
+  customersEachHour: [],
+ 
+ 
+  cookiesEachHour: [],
+ 
+ 
+  totalDailyCookies: 0,
 
 var NewYork= {
   locationName: 'NewYork',
@@ -227,6 +253,7 @@ var NewYork= {
  cookiesEachHour: [],
  totalDailyCookies: 0,
 
+
  calcCustomersEachHour: function () {
    for (var i = 0; i < hours.length; i++) {
      this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour));
@@ -235,6 +262,7 @@ var NewYork= {
 
 
  calcCookiesEachHour: function () {
+
 
    this.calcCustomersEachHour();
    for (var i = 0; i < hours.length; i++) {
@@ -247,10 +275,31 @@ var NewYork= {
  },
 
 
+var Portland = {
+
  render() {
    this.calcCookiesEachHour();
 
    
+  locationName: 'Portland',
+ 
+ 
+  minCustomersPerHour: 23,
+ 
+ 
+  maxCustomersPerHour: 65,
+ 
+ 
+  avgCookiesPerSale: 6.3,
+ 
+ 
+  customersEachHour: [],
+ 
+ 
+  cookiesEachHour: [],
+ 
+ 
+  totalDailyCookies: 0,
 
    var unorderedList = document.getElementById('NewYork')
 
@@ -270,6 +319,33 @@ var NewYork= {
 
 };
 
+var NewYork = {
+
+
+  locationName: 'NewYork',
+ 
+ 
+  minCustomersPerHour: 23,
+ 
+ 
+  maxCustomersPerHour: 65,
+ 
+ 
+  avgCookiesPerSale: 6.3,
+ 
+ 
+  customersEachHour: [],
+ 
+ 
+  cookiesEachHour: [],
+ 
+ 
+  totalDailyCookies: 0,
+
+
+
+
+
 
 function random(min, max) {
 
@@ -281,11 +357,6 @@ function random(min, max) {
 
 
 }
-
-
-
-
-
 
 
 // TODO: list all shop objects in an array
