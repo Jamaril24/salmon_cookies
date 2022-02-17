@@ -1,4 +1,10 @@
-const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+
+
+
+
+
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
+'1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 
 
@@ -12,7 +18,7 @@ const tableElement = document.getElementById('sales-table');
 
 
 // TODO:  create a comment below describing how this Constructor function works
-
+// 
 
 // - what makes it a constructor function?
 
@@ -21,39 +27,16 @@ const tableElement = document.getElementById('sales-table');
 
 
 function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale) {
-
-
- this.locationName = locationName;
-
-
+this.locationName = locationName;
  this.minCustomersPerHour = minCustomersPerHour;
-
-
  this.maxCustomersPerHour = maxCustomersPerHour;
-
-
  this.avgCookiesPerSale = avgCookiesPerSale;
-
-
  this.customersEachHour = [];
-
-
  this.cookiesEachHour = [];
-
-
  this.totalDailyCookies = 0;
 
-
  CookieStand.all.push(this);
-
-
 }
-
-
-
-
-
-
 
 // TODO: create a comment describing the method below
 
@@ -174,10 +157,10 @@ CookieStand.all = [];
 // TODO: instantiate a new CookieStand object (with sample data) for Dubai, Paris, and Lima
 
 
-new CookieStand('Seattle', 23, 65, 6.3);
+new CookieStand('Athens', 23, 65, 6.3);
 
 
-new CookieStand('Tokyo', 3, 24, 1.2);
+new CookieStand('Bend', 3, 24, 1.2);
 
 
 
@@ -200,47 +183,21 @@ function random(min, max) {
 
 
 function makeHeaderRow() {
-
-
- const tableRow = document.createElement('tr');
-
-
+const tableRow = document.createElement('tr');
  let tableHeaderElement = document.createElement('th');
-
-
  tableHeaderElement.textContent = 'Locations';
-
-
  tableRow.appendChild(tableHeaderElement);
-
-
  for (let i = 0; i < hours.length; i++) {
-
-
    tableHeaderElement = document.createElement('th');
-
-
    tableHeaderElement.textContent = hours[i];
-
-
    tableRow.appendChild(tableHeaderElement);
-
-
  }
 
 
  tableHeaderElement = document.createElement('th');
-
-
  tableHeaderElement.textContent = 'Location Totals';
-
-
  tableRow.appendChild(tableHeaderElement);
-
-
  tableElement.appendChild(tableRow);
-
-
 }
 
 
@@ -294,30 +251,15 @@ function makeFooterRow() {
    }
 
 
-   tableHeaderElement = document.createElement('th');
-
-
-   tableHeaderElement.textContent = hourlyTotal;
-
-
-   tableRow.appendChild(tableHeaderElement);
-
-
+  tableHeaderElement = document.createElement('th');
+  tableHeaderElement.textContent = hourlyTotal;
+      tableRow.appendChild(tableHeaderElement);
  }
 
-
  tableHeaderElement = document.createElement('th');
-
-
  tableHeaderElement.textContent = totalOfTotals;
-
-
  tableRow.appendChild(tableHeaderElement);
-
-
  tableElement.appendChild(tableRow);
-
-
 }
 
 
@@ -340,54 +282,22 @@ function makeFooterRow() {
 
  }
 
-
  makeFooterRow();
+})
+();
 
-
-})();
-
-
-
-
-
-
-
-const ocean = document.getElementById('ocean'),
-
-
+ const ocean = document.getElementById('ocean'),
  waveWidth = 10,
-
-
  waveCount = Math.floor(window.innerWidth/waveWidth),
-
-
  docFrag = document.createDocumentFragment();
 
-
-
-
-
-
-
 for(let i = 0; i < waveCount; i++){
-
-
  const wave = document.createElement('div');
-
-
  wave.className += ' wave';
-
-
  docFrag.appendChild(wave);
-
-
  wave.style.left = i * waveWidth + 'px';
-
-
  wave.style.webkitAnimationDelay = (i/100) + 's';
-
-
-}
+};
 
 
 
@@ -399,4 +309,3 @@ for(let i = 0; i < waveCount; i++){
 
 
 ocean.appendChild(docFrag);
-
