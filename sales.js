@@ -18,13 +18,13 @@ const tableElement = document.getElementById('sales-table');
 
 
 // TODO:  create a comment below describing how this Constructor function works
-// 
+// A cunstructor function is
 
 // - what makes it a constructor function?
-
+// a constructor function runs multiple objects at once.
 
 // - what do you think the CookieStand.all.push(all) method is doing?
-
+// Taking all properties inside the function and pushing to the object that we create.
 
 function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale) {
 this.locationName = locationName;
@@ -42,7 +42,7 @@ this.locationName = locationName;
 
 
 // - what does prototype mean?
-
+// protype means that its calculating customers per hour
 
 CookieStand.prototype.calcCustomersEachHour = function() {
 
@@ -159,8 +159,13 @@ CookieStand.all = [];
 
 new CookieStand('Athens', 23, 65, 6.3);
 
-
 new CookieStand('Bend', 3, 24, 1.2);
+
+new CookieStand('Portland', 17, 32,4,6)
+
+new CookieStand('NewYork', 22, 22, 2.2)
+
+new CookieStand('MexicoCity', 19, 23, 6.8)
 
 
 
@@ -197,7 +202,7 @@ const tableRow = document.createElement('tr');
  tableHeaderElement = document.createElement('th');
  tableHeaderElement.textContent = 'Location Totals';
  tableRow.appendChild(tableHeaderElement);
- tableElement.appendChild(tableRow);
+ tableElement.appendChild(tableRow)
 }
 
 
@@ -286,18 +291,18 @@ function makeFooterRow() {
 })
 ();
 
- const ocean = document.getElementById('ocean'),
- waveWidth = 10,
- waveCount = Math.floor(window.innerWidth/waveWidth),
- docFrag = document.createDocumentFragment();
+ //const ocean = document.getElementById('ocean'),
+ //waveWidth = 10,
+ //waveCount = Math.floor(window.innerWidth/waveWidth),
+ //docFrag = document.createDocumentFragment();
 
-for(let i = 0; i < waveCount; i++){
- const wave = document.createElement('div');
- wave.className += ' wave';
- docFrag.appendChild(wave);
- wave.style.left = i * waveWidth + 'px';
- wave.style.webkitAnimationDelay = (i/100) + 's';
-};
+//for(let i = 0; i < waveCount; i++){
+ //const wave = document.createElement('div');
+ //wave.className += ' wave';
+ //docFrag.appendChild(wave);
+ //wave.style.left = i * waveWidth + 'px';
+ //wave.style.webkitAnimationDelay = (i/100) + 's';
+//};
 
 
 
