@@ -1,21 +1,11 @@
+'use strict'
 
 
+console.log('hello world')
 
-
-
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
 '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
-
-
-
 const tableElement = document.getElementById('sales-table');
-
-
-
-
-
-
 
 // TODO:  create a comment below describing how this Constructor function works
 // A cunstructor function is
@@ -34,7 +24,6 @@ this.locationName = locationName;
  this.customersEachHour = [];
  this.cookiesEachHour = [];
  this.totalDailyCookies = 0;
-
  CookieStand.all.push(this);
 }
 
@@ -45,187 +34,76 @@ this.locationName = locationName;
 // protype means that its calculating customers per hour
 
 CookieStand.prototype.calcCustomersEachHour = function() {
-
-
  for (let i = 0; i < hours.length; i++) {
-
-
    this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour));
-
-
  }
-
-
 };
 
-
-
-
-
-
-
 CookieStand.prototype.calcCookiesEachHour = function() {
-
-
  this.calcCustomersEachHour();
 
 
  for (let i = 0; i < hours.length; i++) {
-
-
-   const oneHour = Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
-
-
-   this.cookiesEachHour.push(oneHour);
-
-
+ const oneHour = Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
+  this.cookiesEachHour.push(oneHour);
    this.totalDailyCookies += oneHour;
-
-
  }
-
-
 };
-
-
-
-
-
-
 
 CookieStand.prototype.render = function() {
-
-
  this.calcCookiesEachHour();
-
-
  const tableRow = document.createElement('tr');
-
-
- let tableDataElement = document.createElement('td');
-
-
+let tableDataElement = document.createElement('td');
  tableDataElement.textContent = this.locationName;
-
-
  tableRow.appendChild(tableDataElement);
 
-
- for (let i = 0; i < hours.length; i++) {
-
-
-   tableDataElement = document.createElement('td');
-
-
-   tableDataElement.textContent = this.cookiesEachHour[i];
-
-
-   tableRow.appendChild(tableDataElement);
-
-
+for (let i = 0; i < hours.length; i++) {
+  tableDataElement = document.createElement('td');
+  tableDataElement.textContent = this.cookiesEachHour[i];
+  tableRow.appendChild(tableDataElement);
  }
 
-
- const tableHeaderElement = document.createElement('th');
-
-
+const tableHeaderElement = document.createElement('th');
  tableHeaderElement.textContent = this.totalDailyCookies;
-
-
  tableRow.appendChild(tableHeaderElement);
-
-
  tableElement.appendChild(tableRow);
-
-
 };
 
-
-
-
-
-
-
 CookieStand.all = [];
-
-
-
-
-
-
-
-// TODO: instantiate a new CookieStand object (with sample data) for Dubai, Paris, and Lima
-
-
-new CookieStand('Athens', 23, 65, 6.3);
-
+new CookieStand('Athens', 23, 65, 6.3)
 new CookieStand('Bend', 3, 24, 1.2);
-
-new CookieStand('Portland', 17, 32,4,6)
-
-new CookieStand('NewYork', 22, 22, 2.2)
-
+new CookieStand('Portland', 17, 32,4,6);
+new CookieStand('NewYork', 22, 22, 2.2);
 new CookieStand('MexicoCity', 19, 23, 6.8)
 
-
-
-
-
-
-
 function random(min, max) {
-
-
- return Math.floor(Math.random() * (max - min + 1)) + min;
-
-
+return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-
-
-
-
-
 
 function makeHeaderRow() {
 const tableRow = document.createElement('tr');
  let tableHeaderElement = document.createElement('th');
  tableHeaderElement.textContent = 'Locations';
  tableRow.appendChild(tableHeaderElement);
+ 
  for (let i = 0; i < hours.length; i++) {
    tableHeaderElement = document.createElement('th');
    tableHeaderElement.textContent = hours[i];
    tableRow.appendChild(tableHeaderElement);
  }
-
-
  tableHeaderElement = document.createElement('th');
  tableHeaderElement.textContent = 'Location Totals';
  tableRow.appendChild(tableHeaderElement);
- tableElement.appendChild(tableRow)
+ tableElement.appendChild(tableRow);
 }
 
-
-
-
-
-
-
 // TODO: create a series of comments in this function where you are confused with what's happening
-
-
 // - what about the code is confusing?
-
-
 // - can you guess what it does?
 
 
 function makeFooterRow() {
-
-
  const tableRow = document.createElement('tr');
-
-
  let tableHeaderElement = document.createElement('th');
 
 
@@ -239,18 +117,12 @@ function makeFooterRow() {
 
 
  for (let i = 0; i < hours.length; i++) {
+let hourlyTotal = 0;
 
 
-   let hourlyTotal = 0;
-
-
-   for (const j = 0; j < CookieStand.all.length; j++){
-
-
-     hourlyTotal += CookieStand.all[j].cookiesEachHour[i];
-
-
-     totalOfTotals += CookieStand.all[j].cookiesEachHour[i];
+   for (const i = 0; i < CookieStand.all.length; i++){
+     hourlyTotal += CookieStand.all[i].cookiesEachHour[i];
+     totalOfTotals += CookieStand.all[i].cookiesEachHour[i];
 
 
    }
@@ -313,4 +185,4 @@ function makeFooterRow() {
 // TODO: put docFrag as the argument to appendChild below
 
 
-ocean.appendChild(docFrag);
+//ocean.appendChild(docFrag);

@@ -181,8 +181,6 @@ var NewYork = {
  },
 
 
-
-
  render() {
    this.calcCookiesEachHour();
 
