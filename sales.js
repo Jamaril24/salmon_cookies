@@ -120,7 +120,7 @@ function makeFooterRow() {
 let hourlyTotal = 0;
 
 
-   for (const i = 0; i < CookieStand.all.length; i++){
+   for (let i = 0; i < CookieStand.all.length; i++){
      hourlyTotal += CookieStand.all[i].cookiesEachHour[i];
      totalOfTotals += CookieStand.all[i].cookiesEachHour[i];
 
