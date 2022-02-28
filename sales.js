@@ -143,7 +143,7 @@ let hourlyTotal = 0;
 
 
 
-
+;
 
 (function renderTable() {
 
@@ -163,18 +163,18 @@ let hourlyTotal = 0;
 })
 ();
 
- //const ocean = document.getElementById('ocean'),
- //waveWidth = 10,
- //waveCount = Math.floor(window.innerWidth/waveWidth),
- //docFrag = document.createDocumentFragment();
+ const ocean = document.getElementById('ocean'),
+ waveWidth = 10,
+ waveCount = Math.floor(window.innerWidth/waveWidth),
+ docFrag = document.createDocumentFragment();
 
-//for(let i = 0; i < waveCount; i++){
- //const wave = document.createElement('div');
- //wave.className += ' wave';
- //docFrag.appendChild(wave);
- //wave.style.left = i * waveWidth + 'px';
- //wave.style.webkitAnimationDelay = (i/100) + 's';
-//};
+for(let i = 0; i < waveCount; i++){
+  const wave = document.createElement('div');
+  wave.className += ' wave';
+  docFrag.appendChild(wave);
+  wave.style.left = i * waveWidth + 'px';
+  wave.style.webkitAnimationDelay = (i/100) + 's';
+};
 
 
 
