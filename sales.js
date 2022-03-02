@@ -176,13 +176,4 @@ for(let i = 0; i < waveCount; i++){
   wave.style.webkitAnimationDelay = (i/100) + 's';
 };
 
-
-
-
-
-
-
-// TODO: put docFrag as the argument to appendChild below
-
-
-//ocean.appendChild(docFrag);
+ocean.appendChild(docFrag);
