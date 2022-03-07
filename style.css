@@ -1,28 +1,93 @@
-* {
-    font-family: 'Helvetica', sans-serif;
-    outline: 1px solid black;   
-   }
-   
+*{
+  font-family: 'Helvetica', sans-serif;
+  /* outline: 1px dotted green; */
+}
+ul{
+outline: 1px dotted green;
+}
    body {
-      background-color: white;
+      background-color: darkgray
    } 
-
    h1, h2 {   
     font-family: 'Righteous', cursive;
     color: salmon;
+    font-size: 25px;
    }
-   
+   header{
+    color: rgb(255, 255, 255);
+   }
+   p{
+     text-align: center;
+   }
+   #Intro{
+border: rgb(253, 253, 253) solid 6px;
+text-align: center;
+margin-bottom: 200px;
+margin-top: 200px;
+margin-left: 300px;
+margin-right: 300px;
+font-family: cursive;
+color: rgb(255, 255, 255);
+   }
+   #LeftS{
+     border: white solid 6px;
+     text-align: center;
+     margin-bottom: 200px;
+     margin-top: 200px;
+     margin-left: 500px;
+     margin-right: 500px;
+     font-family: cursive;
+     color: white;
+   }
+#RightS{
+  border: white solid 6px;
+  text-align: center;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  margin-left: 500px;
+  margin-right: 500px;
+  font-family: cursive;
+  color: white;
+}
+#lastp{
+  border: white solid 6px;
+  text-align: center;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  margin-left: 500px;
+  margin-right: 500px;
+  font-family: cursive;
+  color: white;
+}
+#topp{
+  border: white solid 6px;
+  text-align: center;
+  margin-bottom: 200px;
+  margin-top: 200px;
+max-width: 700px;
+  margin-left: 400px;
+  margin-right: 400px;
+  font-family: cursive;
+  color: white;
+  ;
+}
+}
+h4{
+  text-align: center;
+  border: white solid 6px;
+}
    td {
     background-color: salmon;
     padding: 5px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     font-size: .8em;
    }
    .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
+    margin: 100px;
   }
    th {
        background-color: gray;
@@ -31,7 +96,6 @@
        border-radius: 8px;
        font-size: .8em;
    }
-
     #thefish {
         z-index: 3;
         margin-top: 10%;
@@ -43,7 +107,6 @@
         animation-iteration-count: infinite;
         transition-timing-function: ease-in-out;
    }
-   
    #thefish2 {
        z-index: 3;
        margin-top:5%;
@@ -55,7 +118,6 @@
        animation-iteration-count:  infinite;
        transition-timing-function: ease-in-out;   
    }
-   
    #thefish3 {
        z-index: 3;
        margin-top: 15%;
@@ -67,7 +129,6 @@
        animation-iteration-count: infinite;
        transition-timing-function: ease-in-out;
    }
-  
    body{
        height:500px;
        margin:0;
@@ -78,35 +139,17 @@
       padding: 5px;
       width: 150px;
     }
-
    .carouselImg {
        margin: auto;
        max-width: 40%;
        max-height: 400px;
    }
-   
    ul ul li {
-    color: salmon;
+    color: salmon; 
    }
-
    #carousel {
     height: 400px;
    }
-   
-   
-   #ocean{
-       position:absolute;
-       width: 100%;
-       min-height: 90%;
-       background-image: -webkit-gradient(
-           linear, left bottom, left top,
-           color-stop(0, rgb(0,50,150)),
-           color-stop(0.50, rgb(0,150,255))
-   );
-   
-   z-index: 0;
-    }
-    
     #ocean{
       position:absolute;
       width:100%;
@@ -118,12 +161,13 @@
       color-stop(0, rgb(0,50,150)),
       color-stop(0.50, rgb(0,150,255))
       );
+      z-index: 0;
     }
     
     .wave{
       background:#a8e3ff;
       display:inline-block;
-      height:60%;
+      height:30%;
       width:10px;
       position:absolute;
       animation-name:             dostuff; 
